@@ -1,16 +1,3 @@
-//buildscript {
-//    repositories {
-//        jcenter()
-//        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
-//    }
-//
-//    dependencies {
-//        classpath('com.github.peacetrue.modelgenerator:peacetrue-modelgenerator-gradle-plugin:1.0-SNAPSHOT')
-//    }
-//}
-//
-//apply plugin: 'com.github.peacetrue.modelgenerator'
-
 description '模板服务mybatis实现'
 
 configurations {
