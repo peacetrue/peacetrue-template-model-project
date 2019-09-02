@@ -25,16 +25,17 @@ public class ControllerTemplateProperties {
 
     @Data
     public static class Urls {
+        private String basePath = "/demos";
         /** 新增地址 */
-        private String add;
+        private String add = "";
         /** 查询地址 */
-        private String query;
+        private String query = "";
         /** 查看地址 */
-        private String get;
+        private String get = "";
         /** 修改地址 */
-        private String modify;
+        private String modify = "";
         /** 删除地址 */
-        private String delete;
+        private String delete = "";
     }
 
 }

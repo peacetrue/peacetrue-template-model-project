@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 /**
  * @author xiayx
  */
-@RequestMapping
+@RequestMapping(value = "${peacetrue.template.demo.urls.base-path}")
 @SuppressWarnings("unchecked")
 public class DemoController {
 

@@ -1,17 +1,9 @@
 package com.github.peacetrue.template.modules.demo;
 
-import com.github.pagehelper.autoconfigure.PageHelperAutoConfiguration;
 import com.github.peacetrue.spring.util.BeanUtils;
-import com.github.peacetrue.template.ControllerTemplateAutoConfiguration;
-import com.github.peacetrue.template.MybatisTemplateAutoConfiguration;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration;
-import org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration;
-import org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
@@ -31,18 +23,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @author xiayx
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = {
-        DataSourceAutoConfiguration.class,
-        DataSourceTransactionManagerAutoConfiguration.class,
-        MybatisAutoConfiguration.class,
-        PageHelperAutoConfiguration.class,
-        MybatisTemplateAutoConfiguration.class,
-        WebMvcAutoConfiguration.class,
-        HttpMessageConvertersAutoConfiguration.class,
-        ControllerTemplateAutoConfiguration.class,
-}, properties = "logging.level.root=debug")
+@SpringBootTest(classes = TestControllerTemplateAutoConfiguration.class)
 @AutoConfigureMockMvc
-@ActiveProfiles("datasource")
+@ActiveProfiles("template-controller-test")
 public class DemoControllerTest {
 
     @Autowired

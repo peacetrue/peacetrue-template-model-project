@@ -1,15 +1,10 @@
 package com.github.peacetrue.template.modules.demo;
 
-import com.github.pagehelper.autoconfigure.PageHelperAutoConfiguration;
 import com.github.peacetrue.spring.util.BeanUtils;
-import com.github.peacetrue.template.MybatisTemplateAutoConfiguration;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -21,14 +16,8 @@ import org.springframework.transaction.annotation.Transactional;
  * @author xiayx
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = {
-        DataSourceAutoConfiguration.class,
-        DataSourceTransactionManagerAutoConfiguration.class,
-        MybatisAutoConfiguration.class,
-        PageHelperAutoConfiguration.class,
-        MybatisTemplateAutoConfiguration.class,
-})
-@ActiveProfiles("datasource")
+@SpringBootTest(classes = TestServiceTemplateAutoConfiguration.class)
+@ActiveProfiles("template-service-test")
 @Transactional
 public class DemoServiceImplTest {
 

@@ -8,6 +8,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  */
 @Data
 @ConfigurationProperties(prefix = "peacetrue.template")
-public class MybatisTemplateProperties {
+public class ServiceTemplateProperties {
 
 }

@@ -10,5 +10,6 @@ dependencies {
     annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
 
     testImplementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation project(":peacetrue-template-service-mybatis")
     testImplementation project(path: ':peacetrue-template-service-mybatis', configuration: 'testArtifacts')
 }

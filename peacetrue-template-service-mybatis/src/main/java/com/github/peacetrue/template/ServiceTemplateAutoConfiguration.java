@@ -17,14 +17,14 @@ import java.util.Objects;
  * @author xiayx
  */
 @Configuration
-@EnableConfigurationProperties(MybatisTemplateProperties.class)
-@MapperScan(basePackageClasses = MybatisTemplateAutoConfiguration.class, annotationClass = Mapper.class)
+@EnableConfigurationProperties(ServiceTemplateProperties.class)
+@MapperScan(basePackageClasses = ServiceTemplateAutoConfiguration.class, annotationClass = Mapper.class)
 @PropertySource("classpath:/application-template-service.properties")
-public class MybatisTemplateAutoConfiguration {
+public class ServiceTemplateAutoConfiguration {
 
-    private MybatisTemplateProperties properties;
+    private ServiceTemplateProperties properties;
 
-    public MybatisTemplateAutoConfiguration(MybatisTemplateProperties properties) {
+    public ServiceTemplateAutoConfiguration(ServiceTemplateProperties properties) {
         this.properties = Objects.requireNonNull(properties);
     }
 
