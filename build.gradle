@@ -31,6 +31,17 @@ subprojects { project ->
     apply plugin: "java-library"
     sourceCompatibility = 1.8
 
+    apply plugin: "idea"
+    idea {
+        module {
+            inheritOutputDirs = false
+            outputDir = tasks.compileJava.destinationDir
+            testOutputDir = tasks.compileTestJava.destinationDir
+            downloadSources = false
+            downloadJavadoc = false
+        }
+    }
+
     dependencies {
         compileOnly "org.projectlombok:lombok"
         annotationProcessor "org.projectlombok:lombok"
